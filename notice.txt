@@ -1,0 +1,6 @@
+Cumann Muscraí BBS
+
+Originally based on TC²-BBS by TheCommsChannel.
+
+This project is maintained by EI9IMB and remains licensed under
+the GNU General Public License v3.0.

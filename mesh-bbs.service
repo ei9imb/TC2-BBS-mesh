@@ -1,14 +1,14 @@
 [Unit]
-Description=TC²-BBS Meshtastic Version
+Description=Cumann Muscraí BBS for Meshtastic
 After=multi-user.target
 
 [Service]
 Type=simple
 Restart=always
 RestartSec=20
-User=pi
-WorkingDirectory=/home/pi/TC2-BBS-mesh
-ExecStart=/home/pi/TC2-BBS-mesh/venv/bin/python3 /home/pi/TC2-BBS-mesh/server.py
+User=ei9imb
+WorkingDirectory=/home/ei9imb/cumann-muscrai-bbs
+ExecStart=/home/ei9imb/cumann-muscrai-bbs/venv/bin/python3 /home/ei9imb/cumann-muscrai-bbs/server.py
 
 [Install]
 WantedBy=multi-user.target

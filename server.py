@@ -1,15 +1,22 @@
 #!/usr/bin/env python3
 
 """
-TC²-BBS Server for Meshtastic by TheCommsChannel (TC²)
-Date: 07/14/2024
-Version: 0.1.6
+Cumann Muscraí BBS
+Version: 1.0.0-alpha1
+
+A conservative fork of TC²-BBS by TheCommsChannel (TC²).
+
+Original Author:
+    TheCommsChannel
+
+Maintainer:
+    EI9IMB
 
 Description:
-The system allows for mail message handling, bulletin boards, and a channel
-directory. It uses a configuration file for setup details and an SQLite3
-database for data storage. Mail messages and bulletins are synced with
-other BBS servers listed in the config.ini file.
+Cumann Muscraí BBS is a lightweight Bulletin Board System for the
+Meshtastic network. It provides private mail, bulletin boards,
+channel directories and BBS-to-BBS synchronisation while remaining
+compatible with the original TC²-BBS architecture.
 """
 
 import logging
@@ -39,13 +46,14 @@ js8call_logger.addHandler(js8call_handler)
 
 def display_banner():
     banner = """
-████████╗ ██████╗██████╗       ██████╗ ██████╗ ███████╗
-╚══██╔══╝██╔════╝╚════██╗      ██╔══██╗██╔══██╗██╔════╝
-   ██║   ██║      █████╔╝█████╗██████╔╝██████╔╝███████╗
-   ██║   ██║     ██╔═══╝ ╚════╝██╔══██╗██╔══██╗╚════██║
-   ██║   ╚██████╗███████╗      ██████╔╝██████╔╝███████║
-   ╚═╝    ╚═════╝╚══════╝      ╚═════╝ ╚═════╝ ╚══════╝
-Meshtastic Version
+██████╗ ██████╗ ███████╗
+██╔══██╗██╔══██╗██╔════╝
+██████╔╝██████╔╝███████╗
+██╔══██╗██╔══██╗╚════██║
+██████╔╝██████╔╝███████║
+╚═════╝ ╚═════╝ ╚══════╝
+
+Cumann Mhúscraí
 """
     print(banner)
 
@@ -63,7 +71,10 @@ def main():
     interface.bbs_nodes = system_config['bbs_nodes']
     interface.allowed_nodes = system_config['allowed_nodes']
 
-    logging.info(f"TC²-BBS is running on {system_config['interface_type']} interface...")
+    logging.info(
+    f"Cumann Muscraí BBS v1.0.0-alpha1 running on "
+    f"{system_config['interface_type']} interface..."
+)
 
     initialize_database()
 
