@@ -7,8 +7,9 @@ Type=simple
 Restart=always
 RestartSec=20
 User=ei9imb
-WorkingDirectory=/home/ei9imb/cumann-muscrai-bbs
-ExecStart=/home/ei9imb/cumann-muscrai-bbs/venv/bin/python3 /home/ei9imb/cumann-muscrai-bbs/server.py
+WorkingDirectory=/home/ei9imb/TC2-BBS-mesh
+ExecStart=/home/ei9imb/TC2-BBS-mesh/.venv/bin/python /home/ei9imb/TC2-BBS-mesh/server.py
+Environment=PYTHONUNBUFFERED=1
 
 [Install]
 WantedBy=multi-user.target
